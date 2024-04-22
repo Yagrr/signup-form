@@ -1,34 +1,110 @@
-body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    margin:0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #17161B;
+/* Fonts */
+@font-face {
+    font-family: "Inter";
+    src: 
+        url("fonts/inter-regular-webfont.woff2") 
+        format("woff2"),
+        url("fonts/inter-regular-webfont.woff") 
+        format("woff");
+    font-weight: normal;
+    font-style: normal;
 }
 
-/* Desktop */
-@media only screen and (min-width: 700px) {
-    .h2-boxes {
-        flex-wrap: nowrap;
-    }
+@font-face {
+    font-family: "Inter";
+    src: 
+        url("fonts/inter-italic-webfont.woff2") 
+        format("woff2"),
+        url("fonts/inter-italic-webfont.woff") 
+        format("woff");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: 
+        url("fonts/inter-bold-webfont.woff2") 
+        format("woff2"),
+        url("fonts/inter-bold-webfont.woff") 
+        format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: 
+        url("fonts/inter-extrabold-webfont.woff2") 
+        format("woff2"),
+        url("fonts/inter-extrabold-webfont.woff") 
+        format("woff");
+    font-weight: 800;
+    font-style: normal;
+}
+
+body {
+    min-height: 100vh;
+    margin:0;
+    font-family: 'Inter',
+        sans-serif;
+    font-weight: normal;
+    background-color: #080512;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
+
+/* Resets */
+button {
+    display: inline-block;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+
+    font-size: 1rem;
+    line-height: 1;
+    background: transparent;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 /* Header */
-.header {
+.top-header {
     display: flex;
     justify-content:space-around;
     align-items: center;
     padding:20px;
-    min-height: 50px;
-    background-image: linear-gradient(180deg, #3D3258, #332A4A);
+    background-image: linear-gradient(180deg, #7663A3, #544380);
+    position: absolute;
+    width: 100%;
+    height: 40px;
+}
+
+.top-header {
+    &.is-fixed {
+        position: fixed;
+        transform: translate3d(0, -100%, 0);
+    }
+    &.can-animate {
+        transition: transform 0.3s ease, visiblity 0s 0.3s linear;
+    }
+    &.scroll-up {
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 .header-logo,.header-logo:hover {
     font-size: 30px;
     color: #F9FAF8;
     text-decoration: none;
-    font-weight:bold;
+    font-family:'Inter','Noto Sans', sans-serif;
+    font-weight: 800;
 }
 
 .header-links {
@@ -51,20 +127,43 @@ body {
     color: #E5E7EB;
 }
 
+/* Burger menu */
+
+#burger-menu {
+    width: 40px;
+    height: 40px;
+    display: block;
+    border: none;
+    padding: 0px;
+    margin: 20px;
+    background: linear-gradient(
+        to bottom,
+         #FFFFFF, #FFFFFF 20%,
+         transparent 20%, transparent 40%,
+         #FFFFFF 40%, #FFFFFF 60%,
+         transparent 60%, transparent 80%,
+         #FFFFFF 80%, #FFFFFF 100%
+        );
+}
+
 /* Page content */
 .content {
     display:flex;
     flex-direction:column;
     flex:auto;
+    margin-top: 4.8rem;
 }
 
 /* Gradient background */
+.BG-hero-head2 {
+    background: rgb(84,67,128);
+    background: linear-gradient(180deg, rgba(84,67,128,1) 0%, rgba(54,41,87,1) 30%, rgba(22,15,42,1) 65%, rgba(8,5,18,1) 100%); 
+}
 
 .hero {
     display: flex;
     justify-content: center;
     align-items:center;
-    background-image: linear-gradient(180deg, #332A4A,#1B1627);
     padding: 100px;
     gap:100px;
 }
@@ -72,19 +171,19 @@ body {
 .h1-left {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align:left;
+    align-items: center;
+    text-align:center;
+    min-width: 250px;
     max-width: 450px;
     gap:12px;
 }
 
 .h1-left-title {
-    font-size:48px;
+    font-size:calc(32px + 0.6rem);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight:bolder;
     color:#F9FAF8;
     text-wrap:wrap;
-    max-width:420px;
 }
 
 .h1-left-subtext {
@@ -126,6 +225,7 @@ a:hover.sign-button {
 
 .h1-right {
     width:500px;
+    display:none;
 }
 
 /* Section 2 */
@@ -142,16 +242,17 @@ a:hover.sign-button {
 
 
 .h2-title {
-    font-size: 36px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: calc(36px + 0.1rem);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    color:#FFFFFF;
-    padding:10px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 10px;
 }
 
 .h2-boxes {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
     gap:60px;
@@ -160,16 +261,17 @@ a:hover.sign-button {
 .h2-box {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items:center;
     text-align: center;
-    min-width:4em;
+    width:16rem;
+    height:20rem;
     gap: 10px;
+    overflow: break-word;
 }
 
 img.box-img {
-    width:195px;
-    height:195px;
+    width:200px;
+    height:200px;
     border-radius: 15px;
     transition: transform .2s;
 }
@@ -180,19 +282,20 @@ img.box-img {
 
 .img-subtext {
     font-weight:lighter;
-    font-size: 20px;
+    font-size: calc(20px + 0.1vw);
+    line-height: calc(1.1em + 0.5vw);
     color: #FFFFFF;
     text-wrap: wrap;
 }
 
-/* Quote */
+/* Section 3: Quote */
 
 .header-3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:#E5E7EB;
+    color:white;
     padding: 150px 50px 150px 50px;
 }
 
@@ -214,49 +317,81 @@ img.box-img {
     font-weight:bold;
 }
 
+/* Section 4: big button */
 .header-4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 15%;
     padding: 100px 50px 100px 50px;
 }
 
 .big-sign {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items:center;
-    background-color:#201A2E;
-    padding: 50px 200px 50px 200px;
-    gap: 250px;
+    background: rgb(84,67,128);
+    background: radial-gradient(circle,rgba(84,67,128,1) 0%, rgba(49,38,80,1) 75%, rgba(22,15,42,0.6710083691679797) 90%, rgba(8,5,18,0.458123215106355) 100%);
+    gap: 5%;
+    padding: 5% 5vh 5% 5vh;
     border-radius: 20px;
 }
 
 .h4-left {
-    min-width: 500px;
+    width: min(55vw, 75%);
+    text-wrap: wrap;
 }
 
 .big-sign-text {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color:white;
-    font-size:24px;
+    font-size: calc(24px + 0.3vw);
     font-weight: bold;
+    line-height: 2.5rem;
 }
 
 .big-sign-subtext {
     color: white;
+    line-height: 1.5rem;
+    font-size: calc(14px + 0.3vw);
 }
 
+.h4-sign-button .sign-button {
+    margin: 25px 10px 0px 10px;
+}
+
+
+/* Footer */
 
 .footer {
     display: flex;
     justify-content: center;
     align-items: center;
     color:#E5E7EB;
-    background-image: linear-gradient(180deg, #1B1627,#120F1A);
+    background-image: #0A0615;
     bottom: 0;
-    width: 100;
+    width: 100%;
     padding:20px;
     min-height: 50px;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1100px) {
+    .h1-left {
+        text-align:left;
+        align-items: flex-start;
+    }
+    .h2-boxes {
+        flex-wrap: nowrap;
+    }
+    .h1-right {
+        display: block;
+    }
+    .big-sign {
+        flex-direction: row;
+        padding: 5% 25vh 5% 25vh;
+        gap: 10px;
+    }
 }

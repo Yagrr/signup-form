@@ -3,36 +3,119 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Sign-up Form</title>
-        <link href="style.css" rel="stylesheet">
+        <title>INFRA-STAR</title>
+        <link href="landing-styles.css" rel="stylesheet">
     </head>
     <body>
 
-        <section class="left">
-            <header class="logo">
-            <!-- Add logo image here -->
-                ODIN
-            </header>
-            <!-- Add background image here -->
-        </section>
+        <header class="top-header">
 
-        <section class="right">
+            <a class="header-logo" href="index.html">INFRA-STAR ☇</a>
 
-            <header>
-                <p class="header-signup">Create your Odin Account</p>
-                <p class="header-info"></p>
-                <p class="header-signin">Or <span class="underline" href="index.html">sign in to your existing account</span></p>
-            </header>
+            <button id="burger-menu">
 
-            <div class="form-container">  
-                <form>
-            
+                <nav class="top-menu">
 
-                </form> 
+                    <ul class="header-links">
+                        <li><a class="header-link" href="index.html">Products</a></li>
+                        <li><a class="header-link"href="index.html">News & Events</a></li>
+                        <li><a class="header-link"href="https://github.com/Yagrr/odin-landingpage">About</a></li> 
+                        <li><a class="header-link"href="index.html">Sign in</a></li>
+                    </ul>
+                </nav>
+
+            </button>
+
+        </header>
+
+        <div class="content">
+            <div class="BG-hero-head2">
+
+                <section class="hero">
+                    <div class="h1-left">
+
+                        <div class="h1-left-title">
+                            Data-driven Earth discovery
+                        </div>
+
+                        <div class="h1-left-subtext">
+                            Experts in Earth observation data analytics and modelling. Free demo on sign up.
+                        </div>
+
+                        <div class="h1-sign-button">
+                            <a class="sign-button" href="index.html">Sign up</a>
+                        </div>
+                    </div>
+
+                    <img class="h1-right" src="resources/satellite.jpg" alt="Image of a satellite">
+
+                </section>
+
+                <section class="head-2">
+                    <div class="h2-title">
+                        Ready-to-use APIs and database
+                    </div>
+                    <div class="h2-boxes">
+
+                        <div class="h2-box">
+                            <img class="box-img" src="resources/box-mountains.jpg" alt="Satellite image of mountains">
+                            <div class="img-subtext">GIS and remote sensing software</div>
+                        </div>
+
+                        <div class="h2-box">
+                            <img class="box-img" src="resources/box-fields.jpg" alt="Satellite image of fields">
+                            <div class="img-subtext">Machine learning datasets</div>
+                        </div>
+
+                        <div class="h2-box">
+                            <img class="box-img"src="resources/box-netherlands.jpg" alt="Satellite image">
+                            <div class="img-subtext">Spatial analytics tools</div>
+                        </div>
+
+                        <div class="h2-box">
+                            <img class="box-img"src="resources/box-meandering-river.jpg" alt="image">
+                            <div class="img-subtext">Data visualisation and modelling</div>
+                        </div>
+                    </div>
+                </section>
+
             </div>
+            <section class="header-3">
 
-            <button type="submit" class="create-account">Create Account</button>
-        </section>
+                <div class="quote-wrapper">
+                    <div class="quote">
+                        ″Everything is related to everything else, but near things are more related than distant things, as a consequence of accessibility."
+                    </div>
 
-    </body>
+                    <div class="quote-author">
+                        - Robert T. Walker
+                    </div>
+                </div>
+            </section>
+
+            <section class="header-4">
+                <div class="big-sign">
+                    <div class="h4-left">
+                        <div class="big-sign-text">
+                            Planetary observation at arm's length
+                        </div>
+
+                        <div class="big-sign-subtext">
+                            Browse our data product catalog by signing up for a free demo!
+                        </div>
+                    </div>
+
+                    <div class="h4-sign-button">
+                        <a class="sign-button" href="index.html">Sign up</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer class="footer">
+            Copyright © The Odin Project 2024
+        </footer>
+
+        <script src="header.js"></script>
+    </body> 
 </html>

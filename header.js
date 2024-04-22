@@ -1,5 +1,5 @@
 const header = document.querySelector('.top-header');
-const hero = document.querySelector('.hero');
+const burger = document.querySelector('.header-links');
 let lastScroll = 0;
 
 
@@ -19,6 +19,21 @@ const throttle = (func, time = 100) => {
 const validateHeader = () => {
     const windowY = window.scrollY;
     const windowH = window.innerHeight;
+    let burgerDisplay = window.getComputedStyle(burger,null).visibility;
+
+    if (burgerDisplay === 'visible') {
+        header.classList.add('scroll-up');
+        if (windowY > windowH) {
+            // We passed the first section, set a toggable class
+            header.classList.add('is-fixed');
+        } else {
+            header.classList.remove('is-fixed', 'can-animate');
+        }
+        lastScroll = windowY;
+        return
+    } else if (burgerDisplay === 'none') {
+        header.classList.add('scroll-up');
+    }
 
     if (windowY > windowH) {
         // We passed the first section, set a toggable class

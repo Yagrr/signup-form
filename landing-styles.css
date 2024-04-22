@@ -1,0 +1,262 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin:0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #17161B;
+}
+
+/* Desktop */
+@media only screen and (min-width: 700px) {
+    .h2-boxes {
+        flex-wrap: nowrap;
+    }
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    padding:20px;
+    min-height: 50px;
+    background-image: linear-gradient(180deg, #3D3258, #332A4A);
+}
+
+.header-logo,.header-logo:hover {
+    font-size: 30px;
+    color: #F9FAF8;
+    text-decoration: none;
+    font-weight:bold;
+}
+
+.header-links {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    font-size:20px;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+    color: #E5E7EB;
+}
+
+.header-link{
+    text-decoration: none;
+    color: #E5E7EB;
+}
+.header-link:hover {
+    text-decoration: underline;
+    color: #E5E7EB;
+}
+
+/* Page content */
+.content {
+    display:flex;
+    flex-direction:column;
+    flex:auto;
+}
+
+/* Gradient background */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-image: linear-gradient(180deg, #332A4A,#1B1627);
+    padding: 100px;
+    gap:100px;
+}
+
+.h1-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align:left;
+    max-width: 450px;
+    gap:12px;
+}
+
+.h1-left-title {
+    font-size:48px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bolder;
+    color:#F9FAF8;
+    text-wrap:wrap;
+    max-width:420px;
+}
+
+.h1-left-subtext {
+    font-size:18px;
+    text-wrap:wrap;
+    color: #E5E7EB;
+}
+
+.sign-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform .1s;
+}
+
+.sign-button:hover {
+    transform: scale(1.10);
+}
+
+.sign-button {
+    white-space:nowrap;
+    padding: 7px 26px 7px 26px;
+}
+
+
+a.sign-button {
+    color: white;
+    font-size:21px;
+    text-decoration:none;
+}
+
+a:hover.sign-button {
+    color: white;
+}
+
+.h1-right {
+    width:500px;
+}
+
+/* Section 2 */
+
+.head-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:35px;
+    gap:25px;
+    padding-bottom:130px;
+}
+
+
+.h2-title {
+    font-size: 36px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color:#FFFFFF;
+    padding:10px;
+}
+
+.h2-boxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:60px;
+}
+
+.h2-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+    min-width:4em;
+    gap: 10px;
+}
+
+img.box-img {
+    width:195px;
+    height:195px;
+    border-radius: 15px;
+    transition: transform .2s;
+}
+
+.box-img:hover {
+    transform:scale(1.05);
+}
+
+.img-subtext {
+    font-weight:lighter;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-wrap: wrap;
+}
+
+/* Quote */
+
+.header-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#E5E7EB;
+    padding: 150px 50px 150px 50px;
+}
+
+.quote-wrapper {
+    max-width: 830px;
+}
+
+.quote {
+    font-size:36px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:lighter;
+    font-style:italic;
+    text-wrap: wrap;
+}
+
+.quote-author {
+    font-size:20px;
+    text-align:end;
+    font-weight:bold;
+}
+
+.header-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px 100px 50px;
+}
+
+.big-sign {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    background-color:#201A2E;
+    padding: 50px 200px 50px 200px;
+    gap: 250px;
+    border-radius: 20px;
+}
+
+.h4-left {
+    min-width: 500px;
+}
+
+.big-sign-text {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    font-size:24px;
+    font-weight: bold;
+}
+
+.big-sign-subtext {
+    color: white;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#E5E7EB;
+    background-image: linear-gradient(180deg, #1B1627,#120F1A);
+    bottom: 0;
+    width: 100;
+    padding:20px;
+    min-height: 50px;
+}

@@ -4,69 +4,92 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Sign-up Form</title>
-        <link href="style.css" rel="stylesheet">
+        <link href="signup-style.css" rel="stylesheet">
     </head>
     <body>
 
-        <section class="left">
-            <header class="logo">
-            <!-- Add logo image here -->
-                INFRA-STAR ☇
-            </header>
-            <!-- Add background image here -->
-        </section>
+        <section class="page-wrapper">
 
-        <section class="right">
+            <section class="left">
+                <header class="header">
+                    <!-- Add logo image here -->
+                    INFRA-STAR ☇
+                </header>
+                <!-- Add background image here -->
+            </section>
 
-            <header>
-                <p class="header-signup">Create your Odin Account</p>
-                <p class="header-info"></p>
-                <p class="header-signin">Or <span class="underline" href="index.html">sign in to your existing account</span></p>
-            </header>
+            <section class="right">
 
-            <div class="form-container">  
-                <form action="" method="post">
+                <header>
+                    <p class="header-logo">INFRA-STAR ☇</p>
+                    <p class="header-signup">Create your Odin Account 
+                        <br>Or <span class="underline" href="index.html">sign in to your existing account</span></p>
+                    <p class="header-info"></p>
+                </header>
 
-                    <div class="form-row">
-                        <label for="firstName">FIRST NAME</label>
-                        <input type="text" id="firstName" name="firstName" required maxlength="64"/>
-                        <span class="error" aria-live="polite"></span>
-                    </div>
+                <div class="form-container">  
+                    <form action="" method="post">
 
-                    <div class="form-row">
-                        <label for="lastName">LAST NAME</label>
-                        <input type="text" id="lastName" name="lastName" required maxlength="64"/>
-                        <span class="error" aria-live="polite"></span>
-                    </div>
+                        <div class="form-row">
+                            <label for="firstName">
+                                <span>FIRST NAME</span> 
+                                <strong><span class="req" aria-label="required">*</span></strong>
+                            </label>
+                            <input type="text" id="firstName" name="firstName" required maxlength="64"/>
+                            <span class="error" aria-live="polite"></span>
+                        </div>
 
-                    <div class="form-row">
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email" minlength="5" required placeholder="name@example.com"/>
-                        <span class="error" aria-live="polite"></span>
-                    </div>
+                        <div class="form-row">
+                            <label for="lastName">
+                                <span>LAST NAME</span> 
+                                <strong><span class="req" aria-label="required">*</span></strong>
+                            </label>
+                            <input type="text" id="lastName" name="lastName" required maxlength="64"/>
+                            <span class="error" aria-live="polite"></span>
+                        </div>
 
-                    <div class="form-row">
-                        <label for="phone">PHONE NUMBER</label>
-                        <input type="tel" id="phone" name="phone" required/>
-                        <span class="error" aria-live="polite"></span>
-                    </div>
+                        <div class="form-row">
+                            <label for="email">
+                                <span>EMAIL</span> 
+                                <strong><span class="req" aria-label="required">*</span></strong>
+                            </label>
+                            <input type="email" id="email" name="email" minlength="5" required placeholder="name@example.com"/>
+                            <span class="error" aria-live="polite"></span>
+                        </div>
 
-                    <div class="form-row">
-                        <label for="password">PASSWORD</label>
-                        <input type="text" id="password" name="password" minlength="8" required/>
-                        <span class="error" aria-live="polite"></span>
-                    </div>
+                        <div class="form-row">
+                            <label for="phone">
+                                <span>PHONE NUMBER</span> 
+                                <strong><span class="req" aria-label="required">*</span></strong>
+                            </label>
+                            <input type="tel" id="phone" name="phone" required/>
+                            <span class="error" aria-live="polite"></span>
+                        </div>
 
-                    <div class="form-row">
-                        <label for="conf-password">PASSWORD</label>
-                        <input type="text" id="conf-password" name="conf-password" minlength="8" required/>
-                        <span class="error" aria-live="polite"></span>
-                    </div>
+                        <div class="form-row">
+                            <label for="password">
+                                <span>PASSWORD</span> 
+                                <strong><span class="req" aria-label="required">*</span></strong>
+                            </label>
+                            <input type="text" id="password" name="password" minlength="8" required/>
+                            <span class="error" aria-live="polite"></span>
+                        </div>
 
-                </form> 
-            </div>
+                        <div class="form-row">
+                            <label for="conf-password">
+                                <span>CONFIRM PASSWORD</span> 
+                                <strong><span class="req" aria-label="required">*</span></strong>
+                            </label>
+                            <input type="text" id="conf-password" name="conf-password" minlength="8" required/>
+                            <span class="error" aria-live="polite"></span>
+                        </div>
 
-            <button type="submit" class="create-account">Create Account</button>
+                    </form> 
+                </div>
+
+                <button type="submit" class="create-account">Create Account</button>
+            </section>
+
         </section>
 
     </body>

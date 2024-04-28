@@ -62,9 +62,9 @@ body {
     min-height: 100vh;
     margin:0;
     font-family: 'Inter', 'Noto Sans', sans-serif;
-    font-size: calc(12px + 0.7rem);
+    font-size: calc(12px + 0.5rem);
     font-weight: normal;
-    color: white;
+    color: #F9FAF8;
     background-color: #080512;
 }
 
@@ -101,6 +101,8 @@ p .underline {
     justify-content: center;
     align-items: center;
     padding: 0 50px 50px 50px;
+    background: linear-gradient(180deg, rgba(84,67,128,1) 0%,
+        rgba(54,41,87,1) 30%, rgba(22,15,42,1) 65%, rgba(8,5,18,1) 100%); 
 }
 
 .header-signup {
@@ -114,7 +116,7 @@ p .underline {
     justify-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
-    gap:10px;
+    gap:5px;
 }
 
 .form-row input {
@@ -122,8 +124,49 @@ p .underline {
   border: 1px solid #D6D9DC;
   border-radius: 3px;
   width: 100%;
-  padding: 7px;
+  padding: 5px;
   font-size: 14px;
+}
+
+/* Button formatting */
+.create-account {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F9FAF8;
+    border-radius: 5px;
+    padding:10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+    color: #F9FAF8;
+
+    transition: transform .1s;
+}
+
+.create-account:hover {
+    transform: scale(1.05)
+}
+
+.sign-button:hover {
+    transform: scale(1.10);
+}
+
+.sign-button {
+    white-space:nowrap;
+    padding: 7px 26px 7px 26px;
+}
+
+
+a.sign-button {
+    color: #F9FAF8;
+    font-size:21px;
+    text-decoration:none;
+}
+
+a:hover.sign-button {
+    color: #F9FAF8;
 }
 
 /* Desktop */
@@ -131,6 +174,7 @@ p .underline {
     .page-wrapper {
         display: flex;
         justify-content: center;
+        overflow: hidden;
     }
 
     .left {
@@ -158,17 +202,28 @@ p .underline {
         display: flex;
         font-size: calc(14px + 0.1rem);
         width:80%;
-        height:50%;
+        height:40%;
         padding-top: 25px; 
+        justify-content: center;
+        align-items: center;
     }
-    
+
+    .form-container form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
     .form-row {
-        float: left;
         width: 50%;
     }
-    .form-row:after {
-        content: "";
-        display: table;
-        clear: both;
+    
+    .form-row input {
+        text-align: left;
+        justify-self: center;
+        align-self: center;
+        width: 75%;
     }
 }

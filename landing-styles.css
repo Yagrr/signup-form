@@ -100,7 +100,7 @@ button {
 }
 
 .header-logo,.header-logo:hover {
-    font-size: 30px;
+    font-size: 40px;
     color: #F9FAF8;
     text-decoration: none;
     font-family:'Inter','Noto Sans', sans-serif;
@@ -116,7 +116,7 @@ button {
     cursor: pointer;
     border: none;
     padding: 0px;
-    margin: 0 20px 0 20px;
+    margin-right: 20px;
     background: linear-gradient(
         to bottom,
          #FFFFFF, #FFFFFF 20%,
@@ -235,7 +235,7 @@ nav label {
 }
 
 .h1-left-subtext {
-    font-size:18px;
+    font-size:calc(16px + 0.3rem);
     text-wrap:wrap;
     color: #E5E7EB;
 }

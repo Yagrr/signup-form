@@ -64,8 +64,8 @@
                                 <strong><span class="req" aria-label="required">*</span></strong>
                             </label>
                             <input type="tel" id="phone" name="phone" required
-                                placeholder="Phone number"
-                                pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}"
+                                placeholder="+XXYYYYYYYY"
+                                pattern="[\+]\d{10}"
                             />
                             <span class="error" aria-live="polite"></span>
                         </div>
@@ -75,7 +75,7 @@
                                 <span>PASSWORD</span> 
                                 <strong><span class="req" aria-label="required">*</span></strong>
                             </label>
-                            <input type="text" id="password" name="password"
+                            <input type="password" id="password" name="password"
                                 minlength="8" required
                                 pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
                             />
@@ -87,7 +87,7 @@
                                 <span>CONFIRM PASSWORD</span> 
                                 <strong><span class="req" aria-label="required">*</span></strong>
                             </label>
-                            <input type="text" id="conf-password"
+                            <input type="password" id="conf-password"
                                 name="conf-password" minlength="8" required
                                 pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
                             />

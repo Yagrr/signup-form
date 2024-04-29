@@ -155,9 +155,8 @@ input[type="password"]:invalid {
 
 /* Button formatting */
 .create-account {    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-self: center;
+    align-self: center;
     border: 2px solid #F9FAF8;
     border-radius: 5px;
     padding:10px;
@@ -236,7 +235,7 @@ a:hover.sign-button {
         align-items: center;
     }
 
-    .form-container form {
+    form .form-container {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;

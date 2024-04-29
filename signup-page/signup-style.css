@@ -170,7 +170,7 @@ p .underline {
         align-items: center;
         width:40vw;
         height:100vh;
-        background-color: grey;
+        background: url(../resources/signup-bg.jpg) #281E40;
     }
 
     .right {

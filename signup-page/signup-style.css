@@ -149,24 +149,11 @@ p .underline {
     transform: scale(1.05)
 }
 
-.sign-button:hover {
-    transform: scale(1.10);
-}
-
-.sign-button {
-    white-space:nowrap;
-    padding: 7px 26px 7px 26px;
-}
-
-
-a.sign-button {
-    color: #F9FAF8;
-    font-size:21px;
-    text-decoration:none;
-}
-
-a:hover.sign-button {
-    color: #F9FAF8;
+.submit-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Desktop */

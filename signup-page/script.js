@@ -8,6 +8,13 @@ function validatePw() {
     if (pw.value === cpw.value) {
         pw.setCustomValidity('');
         cpw.setCustomValidity('');
+        pw.style.borderColor = '';
+        cpw.style.borderColor = '';
+    } else if (!pw.checkValidity() || !cpw.checkValidity()) {     
+        pw.setCustomValidity('Password should contain atleast 8 characters, one lower case letter, one upper case letter and one number');
+        cpw.setCustomValidity('Password should contain atleast 8 characters, one lower case letter, one upper case letter and one number');
+        pw.style.borderColor = 'red';
+        cpw.style.borderColor = 'red';
     } else {
         pw.setCustomValidity('Passwords do not match!');
         cpw.setCustomValidity('Passwords do not match!');

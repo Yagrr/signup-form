@@ -171,7 +171,15 @@ p .underline {
         align-items: center;
         width:40vw;
         height:100vh;
-        background: url(../resources/signup-bg.jpg) #281E40;
+        background: #281E40 url(../resources/signup-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .left .header-logo {
+        width:100%;
+        padding-top: 10px;
+        background: rgba(0,0,0,0.7);
     }
 
     .right {
@@ -180,6 +188,10 @@ p .underline {
         align-items: center;
         width:60vw;
         height:100vh;
+    }
+    /* Hide header logo on right for wide screen */
+    .right header .header-logo {
+        visibility: hidden;
     }
 
     .title {
